@@ -118,6 +118,8 @@ body {
   margin: auto;
   overflow: hidden;
   height: 100vh;
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
 }
 
 .slider .next,
@@ -183,8 +185,8 @@ body {
   text-align: center;
   padding-top: 5em !important;
   z-index: 4;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  -webkit-transition: .6s ease-in-out;
+  transition: .6s ease-in-out;
   font-size: 70px;
   font-weight: 400;
   line-height: 1em;
@@ -200,10 +202,15 @@ body {
 }
 
 #about {
-  margin-top: 5em;
+  margin-top: 6em;
+}
+
+#about span {
+  padding-top: 2em;
 }
 
 #about h1 {
+  padding-top: 10px;
   font-size: 2.3em;
   font-weight: bolder;
   position: relative;
@@ -211,9 +218,10 @@ body {
 }
 
 #about p {
-  color: white;
-  padding: 2em 0;
-  font-size: 20px;
+  font-size: 15px;
+  line-height: 1.75em;
+  margin: 0 0 15px;
+  color: #ACACAC;
 }
 
 #about .about-img {
@@ -221,20 +229,41 @@ body {
   z-index: 1;
 }
 
+#about .about-img img {
+  height: 60vh;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: .7s ease-in-out;
+  transition: .7s ease-in-out;
+}
+
+#about .about-img img:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 #about .about-img .add {
   position: absolute;
   background-color: #E42E71;
-  width: 40%;
-  height: 100px;
+  width: 90%;
+  top: 10%;
   bottom: -20px;
   right: -20px;
   z-index: -1;
 }
 
 #category {
-  padding-top: 6em;
-  padding-bottom: 6em;
+  margin-top: 6em;
+  margin-bottom: 6em;
   height: 100vh;
+}
+
+#category h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 60px;
+  padding-top: 2em;
+  padding-bottom: 1em;
 }
 
 #category .clear-both {
@@ -297,25 +326,24 @@ body {
 }
 
 #Page {
-  background: url(../photo/slider.jpeg);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
-  text-align: center;
-  margin-top: 3em;
-  padding: 0px;
-  height: 50vh;
+  height: 60vh;
 }
 
-#Page h1 {
+#Page .page-item {
+  background: url(../photo/slider.jpeg) no-repeat scroll center center/cover;
+  background-attachment: fixed;
+  text-align: center;
+  margin-top: 8em;
+  height: 60vh;
+}
+
+#Page .page-item h1 {
   color: white;
   padding-top: 2em;
-  padding-left: 1em;
+  padding-left: 5em;
 }
 
-#Page button {
+#Page .page-item button {
   border: 2px solid #E42E71;
   padding: 20px 3em;
   background-color: inherit;
@@ -324,9 +352,10 @@ body {
   position: relative;
   z-index: 1;
   color: white;
+  margin-left: 4em;
 }
 
-#Page button::after {
+#Page .page-item button::after {
   content: '';
   position: absolute;
   width: 0;
@@ -339,11 +368,11 @@ body {
   z-index: -1;
 }
 
-#Page button:hover {
+#Page .page-item button:hover {
   color: white;
 }
 
-#Page button:hover::after {
+#Page .page-item button:hover::after {
   width: 100%;
 }
 
@@ -367,6 +396,7 @@ body {
 
 #exspert .expert-item img {
   width: 100%;
+  height: auto;
 }
 
 #exspert .expert-item .down {
@@ -453,6 +483,12 @@ body {
   transition: .5s ease-in-out;
 }
 
+@media (max-width: 1024px) {
+  #Page .page-item h1 {
+    font-size: 25px;
+  }
+}
+
 #footer {
   background-color: #101010;
   color: white;
@@ -508,13 +544,13 @@ body {
   width: 100%;
 }
 
-.footer-2 {
+#footer2 {
   background-color: #E42E71;
   height: 10vh;
   text-align: center;
 }
 
-.footer-2 p a {
+#footer2 p a {
   color: white;
 }
 
@@ -705,5 +741,26 @@ body {
 
 #AboutMe .about-text h1 {
   color: #E42E71;
+}
+
+.my-gallery {
+  width: 100%;
+  float: left;
+}
+
+.my-gallery img {
+  width: 100%;
+  height: auto;
+}
+
+.my-gallery figure {
+  display: block;
+  float: left;
+  margin: 0 5px 5px 0;
+  width: 150px;
+}
+
+.my-gallery figcaption {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

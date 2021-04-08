@@ -21,7 +21,7 @@ sliderUl.style.left=-(c*sliderWidth)+"px"
  sliderUl.style.width = mySlideWidth + "px"
 
  prevIco.onclick=function(){
-  sliderUl.style.transition="2s ease"
+  sliderUl.style.transition="5s ease"
   // clearInterval(myInt)
    myPrevSlider()
  }
@@ -31,7 +31,7 @@ if(c==sliderLength-1){
 }
  })
 nextIco.onclick=function(){
-  sliderUl.style.transition="2s ease"
+  sliderUl.style.transition="5s ease"
   // clearInterval(myInt)
   myNextSlider();
 

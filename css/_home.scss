@@ -16,6 +16,7 @@ body {
     overflow: hidden;
     // position: relative;
     height: 100vh;
+    transition: .4s ease-in-out;
 
     // padding-top: 2em;
     .next,
@@ -63,7 +64,7 @@ body {
             .sld {
                 position: absolute;
                 width: 100%;
-
+                // background: rgba(19,19,19,0.75) none repeat scroll 0 0;
                 height: 100vh;
                 z-index: 1;
                 color: white;
@@ -74,7 +75,7 @@ body {
                     //  justify-content: end;
                     padding-top: 5em !important;
                     z-index: 4;
-                    transition: .3s ease-in-out;
+                    transition: .6s ease-in-out;
                     font-size: 70px;
                     font-weight: 400;
                     // margin-bottom: 5px;
@@ -95,9 +96,12 @@ body {
 }
 
 #about {
-    margin-top: 5em;
-
+    margin-top: 6em;
+  span{
+      padding-top: 2em;
+  }
     h1 {
+        padding-top: 10px;
         font-size: 2.3em;
         font-weight: bolder;
         position: relative;
@@ -108,20 +112,28 @@ body {
     }
 
     p {
-        color: white;
-        padding: 2em 0;
-        font-size: 20px;
+        font-size: 15px;
+        line-height: 1.75em;
+        margin: 0 0 15px;
+        color: #ACACAC;
     }
 
     .about-img {
         position: relative;
         z-index: 1;
-
+img{
+    height: 60vh;
+    transform: scale(1.05);
+    transition: .7s ease-in-out;
+    &:hover{
+        transform: scale(1);
+    }
+}
         .add {
             position: absolute;
             background-color: #E42E71;
-            width: 40%;
-            height: 100px;
+            width: 90%;
+            top: 10%;
             bottom: -20px;
             right: -20px;
             z-index: -1;
@@ -131,15 +143,22 @@ body {
 }
 
 #category {
-    padding-top: 6em;
-    padding-bottom: 6em;
+    margin-top: 6em;
+    margin-bottom: 6em;
     height: 100vh;
-
+   h1{
+       color: #fff;
+       text-align: center;
+       font-size: 60px;
+       padding-top: 2em;
+       padding-bottom: 1em;
+   }
     .clear-both {
         clear: both;
     }
 
     .category-item {
+      
         overflow: hidden;
         background-color: #0e0b0b;
         height: 60vh;
@@ -202,55 +221,60 @@ body {
 }
 
 #Page {
-    background: url(../photo/slider.jpeg);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
-    text-align: center;
-    margin-top: 3em;
-    padding: 0px;
-    // min-height: 754px;
-    height: 50vh;
-
-    h1 {
-        color: white;
-        padding-top: 2em;
-        padding-left: 1em;
-    }
-
-    button {
-        border: 2px solid #E42E71;
-        padding: 20px 3em;
-        background-color: inherit;
-        font-weight: bolder;
-        padding-top: 20px;
-        position: relative;
-        z-index: 1;
-        color: white;
-
-
-        &::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            transition: .5s;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            background-color: #E42E71;
-            z-index: -1;
-        }
-
-        &:hover {
+    // position: relative;
+    height: 60vh;
+    .page-item{
+        background: url(../photo/slider.jpeg)no-repeat scroll center center / cover;;
+        background-attachment: fixed;
+    
+        text-align: center;
+        
+        margin-top: 8em;
+      
+        // min-height: 754px;
+        height: 60vh;
+        h1 {
             color: white;
-
+            padding-top: 2em;
+            padding-left: 5em;
+        }
+    
+        button {
+            border: 2px solid #E42E71;
+            padding: 20px 3em;
+            background-color: inherit;
+            font-weight: bolder;
+            padding-top: 20px;
+            position: relative;
+            z-index: 1;
+            color: white;
+            margin-left: 4em;
+    
+    
             &::after {
-                width: 100%;
+                content: '';
+                position: absolute;
+                width: 0;
+                transition: .5s;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                background-color: #E42E71;
+                z-index: -1;
+            }
+    
+            &:hover {
+                color: white;
+    
+                &::after {
+                    width: 100%;
+                }
             }
         }
     }
+   
+
+   
 }
 
 #exspert {
@@ -272,6 +296,7 @@ body {
 
         img {
             width: 100%;
+            height: auto;
         }
 
         .down {
@@ -363,4 +388,13 @@ body {
         }
     }
 
+}
+@media(max-width:1024px){
+  #Page{
+   .page-item{
+       h1{
+           font-size: 25px;
+       }
+   }
+  }
 }

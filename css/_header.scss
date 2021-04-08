@@ -1,0 +1,111 @@
+#header{
+  
+    position: fixed;
+    z-index: 5;
+      .menu{
+          position: fixed;  
+          width: 100%;
+          z-index: 4;
+            &.menu-active{
+                background: #000000;
+            }
+          //   background-color: black;
+        //   .len-width{
+        //       width: 150px;
+        //       height: 1px;
+        //       background-color:grey;
+        //   }
+          
+            .nav-bar{
+                position: relative;
+                ul{
+                    li{
+                        padding: 20px 35px;
+    
+                        a{
+                            color:rgb(245, 241, 241);
+                            transition: .4s ease-in-out;
+                            &:hover{
+                                color: #E42E71;
+                            }
+                        }
+                       
+                       
+                    }
+                }
+            }
+        }
+            .menu-mobile{
+                width: 100%;
+                &.menu-active{
+                    background: #000000;
+                }
+                .mobile-logo{
+                    margin-left: 8em;
+                }
+                .sidebar-left{
+                    position: absolute;
+                    display: none;
+                    left: 0;
+                    top: 0;
+                    padding: 1em;
+                    width: 55%;
+                    border:1px solid #E42E71;
+                    background: #000000; 
+                        .close-ico{
+                            position: absolute;
+                            z-index: 3;
+                            right: 0%;
+                            top: 0;
+                            cursor: pointer;
+                            i{
+                                color:#fff;
+                                font-size: 1.2em;
+                            }
+                        }
+                    .mobile-down-menu{
+                        color: white;
+                        background-color:#000000;
+                          .set{
+                              a{
+                                  padding: 10px;
+                                  text-decoration: none;
+                                  
+                                  color: white !important;
+                                //   display: block;
+                                span{
+                                    position: relative;
+                                &::after {
+                                    content: '';
+                                    width: 0px;
+                                    transition: .3s;
+                                    height: 2px;
+                                    left: 1px;
+                                    bottom: 5px;
+                                    background-color: #E42E71;
+                                    position: absolute;
+                                }
+                                &:hover::after {
+
+
+                                    width: 40px;
+        
+        
+                                }
+                            }
+                              }
+                             
+                          }
+                      }                   
+                }            
+             
+             #ico-bar{
+                 color:white;
+                //  background-color: black;
+                 
+             }
+           
+                
+            }
+          
+          }

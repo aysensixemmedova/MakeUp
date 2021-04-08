@@ -1,0 +1,89 @@
+#exspert1{
+  height: 80vh;
+  background: url(../photo/05.jpg);
+   width: 100%;
+   padding-top: 4em;
+    background-repeat: no-repeat;
+    background-position: center center;
+   
+    .exsp-text{
+     padding-top: 7em;
+padding-right: 40px;
+     text-align:end;
+     p{
+         color: white;
+
+     }
+        h1{
+            // text-align: center;
+            color: #e52e71;
+            font-size: 60px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1em;
+            
+       
+        }
+    }
+   
+
+}
+#tap{
+    margin-top:3em ;
+    h1{
+        padding: 1em 0;
+        color: white;
+    }
+    .thumb{
+        // padding-top: 4em;
+        text-align: center;
+        a{
+            h3{
+                color: white;
+            }
+        }
+        p{
+            color: #E42E71;
+        }
+        .img1{
+            position: relative;
+            overflow: hidden; 
+            transition: .3s ease-in-out;
+            &:hover{
+                .thumb-box{
+                    opacity: 1;
+                  
+                }
+            }
+            img{
+                width: 100%;
+                height: auto;
+                border-radius: 50%;
+            }
+           
+        .thumb-box{
+               
+            background:rgba(19,19,19,0.75) none repeat scroll 0 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+             top: 0;
+             left: 0;
+            border-radius: 50%;
+            opacity: 0;
+         
+        }
+            
+        }
+     
+    }
+  
+    
+  }
+ @media(max-width:1024px){
+     .thumb{
+         width: 50%;
+         text-align: center;
+         margin-left: 70px;
+     }
+ }

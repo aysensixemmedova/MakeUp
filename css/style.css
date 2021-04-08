@@ -120,7 +120,8 @@ body {
   height: 100vh;
 }
 
-.slider .next, .slider .prev {
+.slider .next,
+.slider .prev {
   line-height: 50px;
   position: absolute;
   top: 50%;
